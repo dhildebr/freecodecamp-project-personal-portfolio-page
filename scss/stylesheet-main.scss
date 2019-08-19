@@ -1,0 +1,64 @@
+@import "html5";
+@import "colors";
+@import "mixins";
+
+body
+{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  
+  font-size: 0;
+}
+
+section
+{
+  display: flex;
+  background: $color-primary;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+  &#welcome-section
+  {
+    height: 100vh;
+    
+    h1.welcome
+    {
+      display: block;
+      width: 100%;
+      
+      color: $color-accent;
+      text-align: center;
+      
+      font:
+      {
+        familly: "Times New Roman", serif;
+        weight: 700;
+        size: 36pt;
+      }
+    }
+    
+    h2.welcome
+    {
+      display: block;
+      width: 100%;
+      
+      color: $color-accent;
+      text-align: center;
+      
+      font:
+      {
+        familly: "Times New Roman", serif;
+        weight: 400;
+        size: 24pt;
+      }
+    }
+  }
+  
+  &:nth-of-type(2n)
+  { background: scale-color($color-primary, $lightness: -20%); }
+}
