@@ -1,0 +1,75 @@
+@import "colors";
+@import "mixins";
+
+nav#navbar
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  width: 100vw;
+  height: 7.5vh;
+  
+  background: $color-secondary;
+  
+  &>ul
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    
+    border: 0;
+    margin: 0;
+    
+    padding:
+    {
+      top: 2.25vh;
+      bottom: 2.25vh;
+      left: 12pt;
+      right: 12pt;
+    }
+    
+    &>li
+    {
+      display: inline-block;
+      list-style-type: none;
+      @include user-select(none);
+      
+      &>a
+      {
+        font:
+        {
+          family: "Orbitron", sans-serif;
+          weight: 500;
+          size: 3vh;
+        }
+        
+        padding:
+        {
+          top: 0;
+          bottom: 0;
+          left: 12pt;
+          right: 12pt;
+        }
+        
+        &:link,
+        &:visited
+        {
+          color: $color-accent;
+          text-decoration: none;
+        }
+        
+        &:focus,
+        &:hover,
+        &:active
+        {
+          color: scale-color($color-accent, $saturation: 20%, $lightness: -20%);
+          text-decoration: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
