@@ -1,0 +1,115 @@
+@import "colors";
+@import "mixins";
+
+section#projects
+{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  
+  &>ul.projects-list
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    
+    width: 75%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+    &>li.projects-tile
+    {
+      display: inline-block;
+      box-sizing: border-box;
+      
+      background: #000;
+      border: 6px solid #000;
+      border-radius: 8px;
+      padding: 0;
+      
+      text-align: center;
+      list-style-type: none;
+      
+      margin:
+      {
+        top: 0;
+        bottom: 12pt;
+        left: 24pt;
+        right: 24pt;
+      }
+      
+      &>a
+      {
+        &:link,
+        &:visited
+        {
+          color: $color-accent;
+          text-decoration: none;
+          outline: none;
+        }
+        
+        &:focus,
+        &:hover,
+        &:active
+        {
+          color: scale-color($color-accent, $saturation: 20%, $lightness: -20%);
+          text-decoration: none;
+          outline: none;
+        }
+        
+        &>picture.project-thumbnail
+        {
+          display: block;
+          
+          border: 0;
+          padding: 0;
+          margin: 0;
+          
+          @include user-select(none);
+          
+          img { border-radius: 4px; }
+        }
+        
+        &>p.project-title
+        {
+          width: 200px;
+          
+          font:
+          {
+            family: "Roboto", sans-serif;
+            weight: 700;
+            size: 12pt;
+          }
+          
+          margin:
+          {
+            top: 6pt;
+            bottom: 8pt;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+      
+      @media(max-width: 1280px)
+      {
+        margin-left: 12pt;
+        margin-right: 12pt;
+      }
+      
+      @media(max-width: 720px)
+      {
+        margin-left: 6pt;
+        margin-right: 6pt;
+      }
+    }
+    
+    @media(max-width: 1280px)
+    {
+      width: 100%;
+    }
+  }
+}

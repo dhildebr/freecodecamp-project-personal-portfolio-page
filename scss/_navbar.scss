@@ -39,9 +39,12 @@ nav#navbar
       
       &>a
       {
+        text-transform: uppercase;
+        letter-spacing: 2pt;
+        
         font:
         {
-          family: "Orbitron", sans-serif;
+          family: "Roboto", sans-serif;
           weight: 500;
           size: 3vh;
         }
