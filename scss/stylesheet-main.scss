@@ -48,6 +48,9 @@ section
         weight: 700;
         size: 48pt;
       }
+      
+      @media(max-width: 720px)
+      { font-size: 32pt; }
     }
     
     h2.welcome
@@ -68,6 +71,9 @@ section
         weight: 500;
         size: 24pt;
       }
+      
+      @media(max-width: 720px)
+      { font-size: 18pt; }
     }
   }
   
