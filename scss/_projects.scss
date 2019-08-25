@@ -63,6 +63,7 @@ section#projects
         &>picture.project-thumbnail
         {
           display: block;
+          position: relative;
           
           border: 0;
           padding: 0;
@@ -71,6 +72,24 @@ section#projects
           @include user-select(none);
           
           img { border-radius: 4px; }
+          
+          &:focus::after,
+          &:hover::after,
+          &:active::after
+          {
+            display: block;
+            position: absolute;
+            top: 0;
+            
+            width: 200px;
+            height: 200px;
+            
+            background: transparent;
+            box-shadow: inset 0 0 8px 2px #000;
+            border-radius: 4px;
+            
+            content: "";
+          }
         }
         
         &>p.project-title
